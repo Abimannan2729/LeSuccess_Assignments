@@ -1,0 +1,60 @@
+1. Binary Search in a sorted array
+ B) O(log n)
+
+2. Average-case time complexity of Quicksort
+ A) O(n log n)
+
+3. Nested loop with two for loops from 0 to n
+ C) O(n²)
+
+4. Space complexity of Merge Sort
+ B) O(n)
+
+5. Loop with i *= 2 (doubling each iteration)
+ B) O(log n)
+
+6. Space complexity of iterative binary search
+ B) O(1)
+
+7. Insert at start of a LinkedList
+ B) O(1)
+
+8. Accessing array element by index
+ C) O(1)
+
+9. Worst-case time complexity of Bubble Sort
+ B) O(n²)
+
+10. Simple loop from 0 to n incrementing count
+ C) O(n)
+
+11. Reversing a LinkedList iteratively
+ A) O(n)
+
+12. Space complexity of tail-recursive function
+ A) O(n)
+
+13. Average-case insertion in HashMap
+ B) O(1)
+
+14. Nested loop: i from 0 to n, j from 0 to √n
+ C) O(n√n)
+
+15. Space complexity of array of size n
+ B) O(n)
+
+16.Lowest average-case time complexity
+ B) Merge Sort
+
+17. Standard matrix multiplication (n×n)
+ C) O(n³)
+
+18. Best-case time complexity of Insertion Sort (sorted input)
+ A) O(n)
+
+19. Nested loop: j starts from i to n
+ A) O(n²)
+
+20. Worst-case searching in a Hash Table
+ C) O(n)
+
