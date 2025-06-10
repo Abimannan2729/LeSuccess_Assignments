@@ -1,45 +1,44 @@
 import java.util.*;
 
 public class GraphTraversalBFS {
-// 	public static List<Integer> bfsOfGraph(int V, List<List<Integer>> adj) {
-// 		List<Integer> bfs = new ArrayList<>();
-// 		boolean[] visited = new boolean[V];
-// 		Queue<Integer> queue = new LinkedList<>();
+	// public static List<Integer> bfsOfGraph(int V, int st,List<List<Integer>> adj) {
+	// 	List<Integer> bfs = new ArrayList<>();
+	// 	boolean[] visited = new boolean[V];
+	// 	Queue<Integer> queue = new LinkedList<>();
 
 
-// 		queue.offer(0);
-// 		visited[0] = true;
+	// 	queue.offer(st);
+	// 	visited[st] = true;
 
-// 		while (!queue.isEmpty()) {
-// 			int node = queue.poll();
-// 			bfs.add(node);
+	// 	while (!queue.isEmpty()) {
+	// 		int node = queue.poll();
+	// 		bfs.add(node);
 
-// 			for (int neighbor : adj.get(node)) {
-// 				if (!visited[neighbor]) {
-// 					queue.offer(neighbor);
-// 					visited[neighbor] = true;
-// 				}
-// 			}
-// 		}
-// 		return bfs;
-// 	}
-	public static List<Integer> dfsOfGraph(int V, List<List<Integer>> adj) {
-		List<Integer> dfs = new ArrayList<>();
-		boolean[] visited = new boolean[V];
-		dfsHelper(0, adj, visited, dfs);
-		return dfs;
-	}
-
-	private static void dfsHelper(int node, List<List<Integer>> adj, boolean[] visited, List<Integer> dfs) {
-		visited[node] = true;
-		dfs.add(node);
-		for (int neighbor : adj.get(node)) {
-			if (!visited[neighbor]) {
-				dfsHelper(neighbor, adj, visited, dfs);
-			}
-		}
-	}
-
+	// 		for (int neighbor : adj.get(node)) {
+	// 			if (!visited[neighbor]) {
+	// 				queue.offer(neighbor);
+	// 				visited[neighbor] = true;
+	// 			}
+	// 		}
+	// 	}
+	// 	return bfs;
+	// }
+ public static List<Integer> dfsOfGraph(int V,int st,List<List<Integer>> adj){
+     List<Integer> dfs= new ArrayList();
+     boolean[] visited= new boolean[adj.size()];
+     dfs(st,adj,visited,dfs);
+     return dfs;
+ }
+ private static void dfs(int node,List<List<Integer>> adj,boolean[] visited,List<Integer> dfs){
+     dfs.add(node);
+     visited[node]= true;
+     for(int neighbor: adj.get(node)){
+         if(!visited[neighbor]){
+             dfs(neighbor,adj,visited,dfs);
+         }
+     }
+     
+ }
 
 	public static void main(String[] args) {
 		int V = 6;
@@ -55,11 +54,11 @@ public class GraphTraversalBFS {
 			System.out.println(adj.get(i));
 		}
 
-// 		List<Integer> bfs = bfsOfGraph(V, adj);
-// 		System.out.println("BFS Traversal: " + bfs);
+		// List<Integer> bfs = bfsOfGraph(V,0, adj);   // passing no_of vertex,start node for traversal, adj_list
+		// System.out.println("BFS Traversal: " + bfs);
 		
-		List<Integer> dfs = dfsOfGraph(V, adj);
-        System.out.println("DFS Traversal: " + dfs);
+		List<Integer> dfs = dfsOfGraph(V,0, adj);// passing no_of vertex,start node for traversal, adj_list
+                System.out.println("DFS Traversal: " + dfs);
 
 	}
 }
